@@ -1,0 +1,13 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: cert-ssl-test
+spec:
+  secretName: cert-ssl-test  
+  issuerRef:
+    name: letsencrypt-issuer-prod  
+    kind: ClusterIssuer
+  dnsNames:
+    - demo1.ccxstaging-b40146d.cloudeka.xyz
+    # - ccx.dev-staging-tbs.dbaas.cloudeka.id  
